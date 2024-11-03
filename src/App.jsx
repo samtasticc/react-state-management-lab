@@ -77,9 +77,26 @@ const App = () => {
   ];
   
   return (
-    <h1>Hello world!</h1>
+    <>
+      <h1>Hello world!</h1>
+      </>
   );
 }
+<>
+  <h1>Zombie Fighters</h1> {/* Display the list of zombieFighters by mapping the array into the UI of App.jsx. (We’ve provided some helpful CSS assuming you use a ul and lis) */}
+  <ul>
+    {zombieFighers.map((zombieFigher, index) => 
+      <li key={index} {/* Each character should have an image, name, price, strength, and agility. */}
+        <img src={zombieFigher.img} alt={zombieFighers.name}/>
+        <li>{zombieFigher.name}</li>
+        <li>Price: {zombieFigher.price}</li>
+        <li>Strength: {zombieFigher.strength}</li>
+        <li>Agility: {zombieFigher.agility}</li>
+      </li>
+      <button onClick={()=> handleAddFighter}>Add</button> {/* Each character’s UI should also have an Add button to add them to your team. */}
+    )}
+  </ul>
+</>
 
 export default App
 
