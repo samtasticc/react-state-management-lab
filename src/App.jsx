@@ -125,6 +125,7 @@ function App() {
                   <div>Price: {member.price}</div>
                   <div>Strength: {member.strength}</div>
                   <div>Agility: {member.agility}</div>
+                  <button onClick={() => handleRemoveFighter(member)}>Remove</button>
                 </li>
               ))}
             </ul>
